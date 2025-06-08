@@ -47,3 +47,34 @@ If you use this code, please cite the arXiv paper or this GitHub repository dire
 ## 📜 License
 
 This project is open-source under the MIT License.
+
+# Kalman Odlyzko GUI: Riemann Zeta Zero Visualizer with Symbolic Approximation
+
+This project provides a dynamic Python GUI tool to visualize symbolic approximations of the constant function 1 using least-squares projections, log-weighted filtering, and a Kalman filter. It overlays these approximations with the Odlyzko high-precision zeros of the Riemann zeta function along the critical line Re(s) = 0.5.
+
+## Features
+
+- ✅ Interactive sliders to control parameters:  
+  - `ε` (epsilon): Bandwidth for filtering  
+  - `M`: Number of basis terms in the approximation  
+  - `N`: Sample size for least-squares
+- ✅ Kalman filtering to enhance smoothing of the symbolic approximation.
+- ✅ Toggle display of Odlyzko zeros and their real part density.
+- ✅ Secondary zoomed-in visualization panel for focused comparison of approximation stages.
+
+## Demo
+
+![GUI Screenshot](screenshot.png)  
+*(Add a screenshot of the GUI here for visual reference.)*
+
+## File Structure
+
+- `kalman_odlyzko_gui.py`: Main script for visualization and filtering logic.
+- `zeros6.txt`: Required external data file containing the imaginary parts of the Odlyzko zeros. Available [here](https://www-users.cse.umn.edu/~odlyzko/zeta_tables/).
+
+## Requirements
+
+Install the required Python packages using:
+
+```bash
+pip install numpy matplotlib scipy
